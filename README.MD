@@ -26,10 +26,6 @@ npm start
 
 Ejecute el proyecto a través del IDE y dirijase a http://localhost:8000 asegurate de que el servidor y la base de datos esté corriendo.
 
-o
-
-ejecute este comando en la línea de comando:
-
 
 ## Construido con 🛠️
 
