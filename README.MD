@@ -21,6 +21,7 @@ npm start
 
 ```
 
+El script para la base de datos se encontrara en la carpeta src/db/cryptocurrencies-monitor.sql
 
 ## Como Usar ⚙️
 
