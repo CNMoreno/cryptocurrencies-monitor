@@ -26,7 +26,7 @@ export const getCryptoCurrenciesGateway = async (currency: string, id?: string) 
 export const getCryptoCurrencysHistoryGateway = async (id: string, date: string) => {
         const cryptoCurrencyes = await axios.get(`${process.env.URL_COINGECKO}/coins/${id}/history`, {
             params: {
-                date: '30-12-2019'
+                date
             }
         });
 

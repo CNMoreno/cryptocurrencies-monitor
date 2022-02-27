@@ -18,8 +18,6 @@ export const getUserCryptos = async (request: Request, response: Response) => {
 
         let isValid: boolean = moment(date, "DD-MM-YYYY", true).isValid();
 
-        console.log(isValid);
-
         if (!isValid) {
             return response.status(400).json({
                 message: "Invalid date format (DD-MM-YYYY)"
@@ -40,7 +38,6 @@ export const getUserCryptos = async (request: Request, response: Response) => {
 
             for (const userCrypto of userCryptos) {
                 const cryptoUser = await getCryptoCurrencysHistoryGateway(get(userCrypto, "id_crypto"), date);
-                console.log(cryptoUser);
                 arrCryptosUser.push(cryptoUser);
             }
             if (arrCryptosUser.length === 0)
@@ -52,7 +49,6 @@ export const getUserCryptos = async (request: Request, response: Response) => {
 
 
     } catch (error) {
-        console.log(error);
         response.status(500).send("Server Error");
     }
 
